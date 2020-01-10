@@ -47,7 +47,6 @@ namespace SemaphoreSlim
 			semaphore.Release(3);
 			Console.WriteLine("   {0} tasks can enter the semaphore.",semaphore.CurrentCount);
 			// Main thread waits for the tasks to complete.
-			//Task.WaitAll(tasks);
 			await Task.WhenAll(tasks);
 			Console.WriteLine("Main thread exits.");
 
